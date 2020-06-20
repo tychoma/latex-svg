@@ -1,0 +1,37 @@
+\documentclass{scrartcl}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{svg}
+\usepackage{blindtext}
+\usepackage{hyperref}
+
+\title{SVG einbinden}
+\author{}
+
+\begin{document}
+
+\maketitle
+
+\Blindtext
+
+\begin{figure}
+    \centering
+    \def\svgwidth{.4\columnwidth}
+    \input{image.pdf_tex}
+    \caption{Der Text wird in Latex gesetzt, das Bild ist aber in Inkskape
+    erstellt\dots}
+\end{figure}
+
+\section*{Infos}
+
+\begin{itemize}
+    \item Kompiliere mit \texttt{pdflatex latex-svg}
+    \item In Inkscape den Export als PDF und dann \emph{Schrift in
+        Latex setzen} wählen 
+    \item weitere Infos:
+        \url{http://tug.ctan.org/info/svg-inkscape/InkscapePDFLaTeX.pdf}
+\end{itemize}
+
+\end{document}
